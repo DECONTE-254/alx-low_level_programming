@@ -1,2 +1,2 @@
 #!/bin/bash
-export CFILE= -o 1-compiler.0
+gcc CFILE= -o 1-compiler.0
