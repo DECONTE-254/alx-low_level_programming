@@ -1,8 +1,9 @@
 #include "main.h"
+#include <string.h>
 
 /**
- * puts2 - prints one character out of two
- * @str: input
+ * puts2 -> puts2 function
+ * @str: str parameter
  * Return: print
  */
 void puts2(char *str)
