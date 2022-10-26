@@ -4,18 +4,13 @@
 /**
  * puts2 -> puts2 function
  * @str: str parameter
- * Return: print
  */
 void puts2(char *str)
 {
-	int i = 0;
+	int len, i;
 
-	for (; str[i] != '\0'; i++)
-	{
-		if ((i % 2) == 0)
-			_putchar(str[i]);
-		else
-			continue;
-	}
-	_putchar('\0');
+	len = strlen(str);
+	for (i = 0; i < len; i++)
+		_putchar(str[i]);
+	_putchar('\n');
 }
