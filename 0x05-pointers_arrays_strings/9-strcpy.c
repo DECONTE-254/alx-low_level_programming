@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * _strcpy - copies the string pointed by the src
@@ -6,7 +7,7 @@
  * @src: source
  * Return: string
  */
-char *_strcpy(char *dest, char *src);
+char *_strcpy(char *dest, char *src)
 {
 	int len = 0;
 
