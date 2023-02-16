@@ -1,8 +1,7 @@
 #include <stdio.h>
 /**
- * main - print out sizes of data types in C
- * code by alex ict
- * Return: 0
+ * main - A program that prints the size of various computer types
+ * Return: 0 (Success)
  */
 int main(void)
 {
