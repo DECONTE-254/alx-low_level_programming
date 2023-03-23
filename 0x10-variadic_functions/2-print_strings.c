@@ -3,13 +3,12 @@
 #include <stdarg.h>
 
 /**
- * prints_strings - prints strings.
+ * print_strings - prints strings.
  * @seperator: string to be printed between the strings.
  * @n: number of strings passed to the function.
  *
  * Return: no return.
  */
-
 void print_strings(const char *seperator, const unsigned int n, ...)
 {
 	va_list valist;
