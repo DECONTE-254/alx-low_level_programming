@@ -30,8 +30,6 @@ size_t print_listint_safe(const listint_t *head)
 
 	if (temp > current)
 		return (count);
-	else
-
 	{
 		printf("-> [%p] %d\n", (void *)current, current->n);
 		return (count);
