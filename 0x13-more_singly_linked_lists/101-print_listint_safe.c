@@ -4,43 +4,36 @@
 
 /**
  * print_listint_safe - prints a listint_t linked list.
- * @head: pointer to the head of the linked list
+ * @head: A pointer to the head of the linked list.
  *
- * Return: the number of nodes in the list
+ * Return: the number of nodes in the list.
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *slow, *fast;
-	size_t count;
+	const listint_t *current, *temp;
+	size_t count = 0;
 
-	slow = head;
-	fast = head;
-	count = 0;
+	if (head == NULL)
+		exit(98);
 
-	while (fast != NULL && fast->next != NULL)
+	current = head;
+
+	while (current != NULL)
 	{
-		printf("[%p] %d\n", (void *)slow, slow->n);
 		count++;
-		slow = slow->next;
-		fast = fast->next->next;
-
-		if (slow == fast)
-		{
-			printf("[%p] %d\n", (void *)slow, slow->n);
-			count++;
+		printf("[%p] %d\n", (void *)current, current->n);
+		temp = current;
+		current = current->next;
+		if (temp <= current)
 			break;
-		}
 	}
 
-	if (fast == NULL || fast->next == NULL)
+	if (temp > current)
+		return (count);
+	else
+
 	{
-		while (slow != NULL)
-		{
-			printf("[%p] %d\n", (void *)slow, slow->n);
-			count++;
-			slow = slow->next;
-		}
+		printf("-> [%p] %d\n", (void *)current, current->n);
+		return (count);
 	}
-
-	return (count);
 }
